@@ -35,7 +35,7 @@ dummy_y = np_utils.to_categorical(y_integer_encoded)
 x_train, x_test, y_train, y_test = train_test_split(x, y_new, test_size=0.33, random_state=42)
 
 
-""""model=Sequential()
+model=Sequential()
 model.add(Dense(input_dim=132,units=132,kernel_initializer='uniform', activation='relu'))
 model.add(Dense(units=153, kernel_initializer='uniform', activation='relu'))
 model.add(Dense(units=153, kernel_initializer='uniform', activation='relu'))
@@ -45,7 +45,7 @@ model.summary()
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(x_train,y_train, batch_size=100, epochs=10)
-predict=model.predict(x_test)"""
+predict=model.predict(x_test)
 
 
 
@@ -61,9 +61,9 @@ lb4=np.array(lb1)
 lb2=lb.transform([lb4])
 print(lb2)
 
-##lb1=lb.transform([('abdominal_pain','abnormal_menstruation')])
+lb1=lb.transform([('abdominal_pain','abnormal_menstruation')])
 
-""""symptoms=lb.classes_
+symptoms=lb.classes_
 symptoms=np.array(symptoms)
 predict_encoded=model.predict(lb2)
 predict_encoded
@@ -82,5 +82,5 @@ symptom
 
 
  with open('model_pickle','wb') as f:
-	pickle.dump(model,f)"""
+	pickle.dump(model,f)
 
